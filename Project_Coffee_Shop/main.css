@@ -71,8 +71,7 @@ body {
 .total {
     grid-area: totals;
     padding: 10px;
-    border: #43281c solid;
-    border-radius: 1em;
+
 }
 
 .section-title {
@@ -90,6 +89,39 @@ body {
     width: 100%;
 }
 
+.items {
+    list-style: none;
+}
+
+
+
+.item {
+    border-bottom: 2px solid #DDB892;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas:
+        "quantity title price"
+        ". options .";
+    row-gap: 8px;
+}
+
+.item-quantity {
+    grid-area: quantity;
+}
+
+.item-title {
+    grid-area: title;
+}
+
+.item-price {
+    grid-area: price;
+}
+
+.item-options-list {
+    grid-area: options;
+}
+
 .input-group {
     position: relative;
     display: inline-block;
@@ -97,15 +129,36 @@ body {
 
 .input-name {
     border-color: #885a2d;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 8px;
+    background-color: #eee1d5;
+    width: 760px;
 }
 
 .input-label {
+    background-color: #eee1d5;
     color: #885a2d;
     font-size: 11px;
     position: absolute;
     left: 25px;
     top: -7px;
     padding: 0 2px;
+}
+
+.input-card {
+    border-color: #885a2d;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #eee1d5;
+    width: 760px;
+
+}
+
+.input-cvv {
+    border-color: #885a2d;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #eee1d5;
+    margin-top: 15px;
+    width: 300px;
 }
