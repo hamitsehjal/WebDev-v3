@@ -31,33 +31,29 @@
       <!-- 1st Section "Orders"-->
       <section class="order box">
         <h2 class="section-title">ITEMS</h2>
-        <ul>
-          <li>
-            <div>1x</div>
-            <div>Cappucino</div>
-            <div>$6.00</div>
-            <ul>
+        <ul class="items">
+          <li class="item">
+            <div class="item-quantity">1x</div>
+            <div class="item-title">Cappucino</div>
+            <div class="item-price">$6.00</div>
+            <ul class="item-options-list">
               <li>Light Foam</li>
             </ul>
           </li>
-        </ul>
-        <ul>
-          <li>
-            <div>1x</div>
-            <div>Cappucino</div>
-            <div>$7.90</div>
-            <ul>
+          <li class="item">
+            <div class="item-quantity">1x</div>
+            <div class="item-title">Cappucino</div>
+            <div class="item-price">$7.90</div>
+            <ul class="item-options-list">
               <li>Almond Milk</li>
               <li>Double Espresso Shot</li>
             </ul>
           </li>
-        </ul>
-        <ul>
-          <li>
-            <div>1x</div>
-            <div>Croissant</div>
-            <div>$5.37</div>
-            <ul>
+          <li class="item">
+            <div class="item-quantity">1x</div>
+            <div class="item-title">Croissant</div>
+            <div class="item-price">$5.37</div>
+            <ul class="item-options-list">
               <li>butter</li>
             </ul>
           </li>
@@ -65,7 +61,7 @@
       </section>
 
       <!-- 2nd Section "Names"-->
-      <section class="name">
+      <section class="name box">
         <h2 class="section-title">NAME</h2>
         <div class="input-group">
           <label class="input-label" for="userName">Name for order</label>
@@ -79,8 +75,27 @@
       </section>
 
       <!-- 3rd Section "Payments"-->
-      <section class="payment">
+      <section class="payment box">
         <h2 class="section-title">PAYMENT</h2>
+        <div class="input-group">
+          <label class="input-label" for="cardNumber">Card Number</label>
+          <input
+            class="input-card"
+            id="cardNumber"
+            name="cardNumber"
+            placeholder="Card XXX XXX"
+          />
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="cvvNumber">CVV Number</label>
+          <input
+            class="input-cvv"
+            id="cvvNumber"
+            name="cvvNumber"
+            placeholder="CVV XXX"
+          />
+        </div>
       </section>
 
       <!-- 4rd Section "Totals"-->
