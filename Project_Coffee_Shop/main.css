@@ -1,4 +1,6 @@
-/* <!-- Designing the checkout page for a coffee app. --> */
+/* box-sixing: it defines how width and height of the element should be calculated. should padding and border be included in calculating width and height or not..?
+/* padding and border are included in the width and height*/
+
 * {
     box-sizing: border-box;
 }
@@ -10,20 +12,20 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.main-nav {
+
+.main-nav-bar {
+
     background-color: #43281c;
     color: #fbf2c0;
-    font-size: 16px;
     display: flex;
-    align-items: center; 
-    /* align-items works for vertical justification */
     justify-content: center;
-    /* justify-content works for horizontal justification */
+    align-items: center;
+    font-size: 16px;
     font-weight: normal;
 }
 
 .logo {
-    height: 25px;
     position: relative;
     top: 3px;
+    height: 25px;
 }
