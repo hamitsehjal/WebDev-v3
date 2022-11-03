@@ -30,7 +30,7 @@ body {
     height: 25px;
 }
 
-.page {
+.main-page {
     display: grid;
     row-gap: 30px;
     column-gap: 30px;
@@ -49,16 +49,34 @@ body {
 
 .order {
     grid-area: orders;
+    padding: 10px;
+    border: #43281c solid;
+    border-radius: 1em;
 }
 
 .name {
     grid-area: names;
+    padding: 10px;
+    border: #43281c solid;
+    border-radius: 1em;
 }
 
 .payment {
-    grid-area: payments
+    grid-area: payments;
+    padding: 10px;
+    border: #43281c solid;
+    border-radius: 1em;
 }
 
 .total {
-    grid-area: totals
+    grid-area: totals;
+    padding: 10px;
+    border: #43281c solid;
+    border-radius: 1em;
+}
+
+.section-title{
+    color: #885a2d;
+    font-weight: normal;
+    font-size: 16px;
 }
