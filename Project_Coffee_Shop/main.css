@@ -91,6 +91,8 @@ body {
 
 .items {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -104,6 +106,10 @@ body {
         "quantity title price"
         ". options .";
     row-gap: 8px;
+}
+
+.item:last-child {
+    border-bottom: none;
 }
 
 .item-quantity {
