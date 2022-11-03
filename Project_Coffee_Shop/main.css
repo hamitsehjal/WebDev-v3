@@ -1,1 +1,10 @@
 /* <!-- Designing the checkout page for a coffee app. --> */
+
+.logo{
+background-color:darkgoldenrod;
+}
+
+.img-logo{
+    height: 100px;
+    width: 100px;
+}
