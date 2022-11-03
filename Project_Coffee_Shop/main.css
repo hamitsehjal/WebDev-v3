@@ -1,22 +1,29 @@
 /* <!-- Designing the checkout page for a coffee app. --> */
 * {
     box-sizing: border-box;
-  }
-.box-1{
-    border:1px black solid;
-    background-color: darkgoldenrod;
-    color:white;
-    width: 50px;
-    height:50px;
-    float:left;
 }
 
-.box-2{
-    border:none;
-    background-color:white;
-    color:brown;
-    width: 100px;
-    height: 100px;
-    float: left;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+    font-family: 'Open Sans', sans-serif;
 }
 
+.main-nav {
+    background-color: #43281c;
+    color: #fbf2c0;
+    font-size: 16px;
+    display: flex;
+    align-items: center; 
+    /* align-items works for vertical justification */
+    justify-content: center;
+    /* justify-content works for horizontal justification */
+    font-weight: normal;
+}
+
+.logo {
+    height: 25px;
+    position: relative;
+    top: 3px;
+}
