@@ -29,3 +29,35 @@ body {
     top: 3px;
     height: 25px;
 }
+
+.page {
+    display: grid;
+    row-gap: 30px;
+    column-gap: 30px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    grid-template-areas:
+      "order payment"
+      "total total";
+    grid-template-columns: 1fr 1fr;;
+  }
+
+  .box {
+    background-color: #eee1d5;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .box-title {
+    color: #885a2d;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  
+  .order {
+    grid-area: order;
+  }
