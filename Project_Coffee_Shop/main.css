@@ -69,6 +69,7 @@ body {
 .total {
     grid-area: totals;
     padding: 10px;
+    margin:20px 0 0px 10px;
 
 }
 
@@ -172,4 +173,30 @@ margin-bottom: 15px;
     padding: 8px;
     background-color: #eee1d5;
     width: 300px;
+}
+
+.values{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    row-gap: 5px;
+    column-gap: 30px;
+    width: 100%;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    ". price-sub . price-tot .";
+   
+}
+
+.sub-price{
+    grid-area: price-sub;
+}
+.tot-price{
+    grid-area: price-tot;
+
+}
+
+.price-design{
+    font-weight: bolder;
 }
