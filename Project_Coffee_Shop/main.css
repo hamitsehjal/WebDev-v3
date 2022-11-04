@@ -157,7 +157,7 @@ body {
     padding: 8px;
     background-color: #eee1d5;
     width: 760px;
-
+margin-bottom: 15px;
 }
 
 .input-cvv {
@@ -165,6 +165,5 @@ body {
     border-radius: 15px;
     padding: 8px;
     background-color: #eee1d5;
-    margin-top: 15px;
     width: 300px;
 }
