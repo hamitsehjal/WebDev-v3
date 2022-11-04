@@ -39,7 +39,7 @@ body {
     margin: 0 auto;
 
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         "orders names"
@@ -50,7 +50,6 @@ body {
 .order {
     grid-area: orders;
     padding: 10px;
-    /* border: #43281c solid; */
     border-radius: 1em;
 }
 
@@ -69,7 +68,7 @@ body {
 .total {
     grid-area: totals;
     padding: 10px;
-    margin:20px 0 0px 10px;
+    margin: 20px 0 0px 10px;
 
 }
 
@@ -81,7 +80,7 @@ body {
 
 .box {
     background-color: rgb(238, 225, 213);
-    /* border-radius: 5px; */
+    border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
     width: 100%;
@@ -129,7 +128,7 @@ body {
 .item-options-list {
     grid-area: options;
     list-style: none;
-    padding:0;
+    padding: 0;
     color: #885a2d;
     font-weight: lighter;
     font-size: 15px;
@@ -145,7 +144,7 @@ body {
     border-radius: 15px;
     padding: 8px;
     background-color: #eee1d5;
-    width: 760px;
+    width: 700px;
 }
 
 .input-label {
@@ -163,8 +162,8 @@ body {
     border-radius: 15px;
     padding: 8px;
     background-color: #eee1d5;
-    width: 760px;
-margin-bottom: 15px;
+    width: 700px;
+    margin-bottom: 15px;
 }
 
 .input-cvv {
@@ -175,7 +174,7 @@ margin-bottom: 15px;
     width: 300px;
 }
 
-.values{
+.values {
     justify-content: center;
     align-items: center;
     display: grid;
@@ -184,19 +183,32 @@ margin-bottom: 15px;
     width: 100%;
     grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    ". price-sub . price-tot .";
-   
+    grid-template-areas:
+        ". price-sub . price-tot .";
+
 }
 
-.sub-price{
+.sub-price {
     grid-area: price-sub;
 }
-.tot-price{
+
+.tot-price {
     grid-area: price-tot;
 
 }
 
-.price-design{
+.price-design {
     font-weight: bolder;
+}
+
+.place-order {
+    margin: -20px 30px -10px 30px;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: medium;
+    background-color: #DDB892;
+    color: black;
 }
