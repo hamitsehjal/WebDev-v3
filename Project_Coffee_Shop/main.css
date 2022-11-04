@@ -116,14 +116,22 @@ body {
 
 .item-title {
     grid-area: title;
+    font-weight: bold;
 }
 
 .item-price {
     grid-area: price;
+    font-weight: bold;
+
 }
 
 .item-options-list {
     grid-area: options;
+    list-style: none;
+    padding:0;
+    color: #885a2d;
+    font-weight: lighter;
+    font-size: 15px;
 }
 
 .input-group {
