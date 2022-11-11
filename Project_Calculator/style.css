@@ -6,104 +6,59 @@ body {
     margin: 0;
     padding: 0;
 }
-.container {
-    width: 500px;
-    height: 500px;
+
+.grid-container {
+    width: 400px;
+    height: auto;
     margin: auto;
-    padding:0;
+
+
     display: grid;
-    align-items: center;
-    text-align: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "heading heading heading heading"
-        "c c arrow divide"
-        "seven eight nine multiplied"
-        "four five six subtracted"
-        "one two three added"
-        "zeroth zeroth zeroth equaled";
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 2px;
     justify-content: center;
+    align-items: center;
 }
 
-.row {
-    justify-content: space-between;
+
+div h1 {
+    text-align: center;
+}
+
+.input {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+
+.C button{
+    width: 100%;
+    height: 70px;
+    padding: 0px;
+    margin:0
+}
+
+.C {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .button {
     width: 70px;
     height: 70px;
-    margin: 5px 5px;
+    padding: 0px;
+    margin:0;
 }
 
-.heading{
-    grid-area:heading;
-}
-.C {
-    grid-area: c;
+.zero{
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
-.arrow {
-    grid-area: arrow;
-}
-
-.divide {
-    grid-area: divide;
-}
-
-.seven {
-    grid-area: seven;
-}
-
-.eight {
-    grid-area: eight;
-}
-
-.nine {
-    grid-area: nine;
-}
-
-.multiply {
-    grid-area: multiplied;
-}
-
-.four {
-    grid-area: four;
-}
-
-.five {
-    grid-area: five;
-}
-
-.six {
-    grid-area: six;
-}
-
-.subtraction {
-    grid-area: subtracted;
-}
-
-.one {
-    grid-area: one;
-}
-
-.two {
-    grid-area: two;
-}
-
-.three {
-    grid-area: three;
-
-}
-
-.addition {
-    grid-area: added;
-}
-
-.zero {
-    grid-area: zeroth;
-}
-
-.equals {
-    grid-area: equaled;
+.zero button{
+    width: 100%;
+    height: 70px;
+    padding: 0px;
+    margin:0
 }
