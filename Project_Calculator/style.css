@@ -29,6 +29,7 @@ div h1 {
     text-align: center;
 }
 
+
 .input {
     grid-column-start: 1;
     grid-column-end: 5;
@@ -36,15 +37,26 @@ div h1 {
     height: auto;
     padding: 0%;
     margin: 0%;
+   
 }
-
-.input .button {
+.input-tag{
     width: 100%;
     height: 100%;
 
     background-color: #000000;
     color: #fff;
+   font-size:xx-large;
+   font-weight: bold; 
+   padding: 1px 5px;
+   font-family: monospace;
 }
+/* .input .button {
+    width: 100%;
+    height: 100%;
+
+    background-color: #000000;
+    color: #fff;
+} */
 
 .C button {
     width: 100%;
