@@ -1,6 +1,7 @@
 
 let buffer = "0";
-
+let runningTotal = 0;
+let previousOperator;
 const screen = document.querySelector(".screen");
 function buttonClick(value) {
 
@@ -28,16 +29,54 @@ function handleNumbers(number) {
 
 }
 
+function handleMathOperations(symbol) {
+    if (buffer === "0") {
+        // do nothing !1
+        return;
+    }
+
+    const intBuffer = parseInt(buffer);
+
+    if (runningTotal === 0) {
+        runningTotal = intBuffer;
+    }
+    else {
+        flushOperations(intBuffer);
+    }
+
+    previousOperator = symbol;
+    buffer = 0;
+}
+
+function flushOperations(value) {
+    // Perform all the Math Operations !!
+    if (previousOperator === '+') {
+        runningTotal += value;
+    }
+    else if (previousOperator === '/') {
+        runningTotal /= value;
+    }
+    else if (previousOperator === 'x') {
+        runningTotal *= value;
+    }
+    else if (previousOperator === '-') {
+        runningTotal -= value;
+    }
+}
 function handleSymbols(symbol) {
     console.log(symbol + " Symbol!!");
 
-    switch(symbol)
-    {
+    switch (symbol) {
         case 'C':
-            buffer='0';
+            buffer = '0';
             break;
         case '⬅':
-            console.log("Displays BACK-ARROW!!")
+            if (buffer.length === 1) {
+                buffer = "0";
+            }
+            else {
+                buffer = buffer.substring(0, buffer.length - 1);
+            }
             break;
         case '=':
             console.log("Equals To!!");
@@ -47,6 +86,7 @@ function handleSymbols(symbol) {
         case 'x':
         case '-':
             console.log("Math Operations!!");
+            handleMathOperations(symbol);
             break;
     }
 
