@@ -45,7 +45,7 @@ function handleMathOperations(symbol) {
     }
 
     previousOperator = symbol;
-    buffer = 0;
+    buffer = '0';
 }
 
 function flushOperations(value) {
@@ -62,9 +62,11 @@ function flushOperations(value) {
     else if (previousOperator === '-') {
         runningTotal -= value;
     }
+
+    console.log(runningTotal);
 }
 function handleSymbols(symbol) {
-    console.log(symbol + " Symbol!!");
+    // console.log(symbol + " Symbol!!");
 
     switch (symbol) {
         case 'C':
@@ -79,7 +81,16 @@ function handleSymbols(symbol) {
             }
             break;
         case '=':
-            console.log("Equals To!!");
+            if (previousOperator === null) {
+                // need two numbers to do Math
+                return;
+            }
+            flushOperations(parseInt(buffer));
+            previousOperator = null;
+            buffer = "" + runningTotal;
+
+            runningTotal = 0;
+
             break;
         case '+':
         case '/':
