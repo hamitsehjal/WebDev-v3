@@ -1,6 +1,8 @@
 
+let buffer = "0";
+
+const screen = document.querySelector(".screen");
 function buttonClick(value) {
-    console.log(value);
 
     if (isNaN(parseInt(value))) {
         // if the value is not a number --> which means it is a symbol!!
@@ -9,15 +11,25 @@ function buttonClick(value) {
     else {
         handleNumbers(value);
     }
+
+    // we will call the rerender function here
+    // So whenever, anyone clicks on the button, they see current value
+    rerender();
 }
 
-function handleNumbers(value) {
-    console.log(value+" Number!!");
+function handleNumbers(number) {
+
+    if (buffer === '0') {
+        buffer = number;
+    }
+    else {
+        buffer += number;
+    }
 
 }
 
-function handleSymbols(value) {
-    console.log(value+" Symbol!!");
+function handleSymbols(symbol) {
+    console.log(symbol + " Symbol!!");
 
 }
 
@@ -30,4 +42,8 @@ function initialize() {
         })
 }
 
+// rerender function updates the value on the Screen of the Calculator !!
+function rerender() {
+    screen.innerText = buffer;
+}
 initialize();
