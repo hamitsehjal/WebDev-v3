@@ -63,7 +63,7 @@ function flushOperations(value) {
         runningTotal -= value;
     }
 
-    console.log(runningTotal);
+    // console.log(runningTotal);
 }
 function handleSymbols(symbol) {
     // console.log(symbol + " Symbol!!");
@@ -96,7 +96,7 @@ function handleSymbols(symbol) {
         case '/':
         case 'x':
         case '-':
-            console.log("Math Operations!!");
+            // console.log("Math Operations!!");
             handleMathOperations(symbol);
             break;
     }
