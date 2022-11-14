@@ -31,6 +31,25 @@ function handleNumbers(number) {
 function handleSymbols(symbol) {
     console.log(symbol + " Symbol!!");
 
+    switch(symbol)
+    {
+        case 'C':
+            buffer='0';
+            break;
+        case '⬅':
+            console.log("Displays BACK-ARROW!!")
+            break;
+        case '=':
+            console.log("Equals To!!");
+            break;
+        case '+':
+        case '/':
+        case 'x':
+        case '-':
+            console.log("Math Operations!!");
+            break;
+    }
+
 }
 
 function initialize() {
