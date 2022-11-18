@@ -6,7 +6,9 @@ body {
     margin: 15px 50px;
     padding: 0px 50px;
     background-color: black;
-    border: 10px solid #EDEADE;
+    border: 10px solid rgb(198, 195, 195);
+    font-family: monospace;
+    font-size: xx-large;
 }
 
 
@@ -18,11 +20,9 @@ body {
     align-items: center;
     margin: 50px 100px;
     padding: 50px 50px;
-    font-family: monospace;
-    font-size: xx-large;
     background-color: #EDEADE;
     border: 10px solid black;
-    box-shadow: 30px 30px 2px #FFE5B4;
+    box-shadow: 20px 20px 2px #e8ca93;
 
 
 }
@@ -30,6 +30,12 @@ body {
 .main-container h1 {
     color: black;
     text-shadow: -3px 3px #FFE5B4, 0 1px #FFE5B4, 1px 0 #FFE5B4, 0 -1px #FFE5B4;
+    margin-bottom: 0px;
+}
+
+.main-container hr {
+
+    margin-bottom: 25px;
 }
 
 .flex-container {
@@ -41,9 +47,10 @@ body {
 .flex-item {
     background-color: #FFE5B4;
     margin: 5px;
-    color:black;
+    color: black;
     /* padding: 10px;
     font-size: 10px; */
     width: 50px;
-    height:50px;
+    height: 50px;
+    text-transform: uppercase;
 }
