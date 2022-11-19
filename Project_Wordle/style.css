@@ -57,6 +57,7 @@ body {
     font-size: 35px;
 }
 
+
 .correct {
     background-color: green;
 
@@ -131,6 +132,7 @@ body {
 }
 
 .loading {
+    visibility: hidden;
     animation: spinning 1s infinite linear;
     margin-bottom: 1em;
     color:brown;
@@ -141,4 +143,8 @@ body {
     to {
         transform: rotate(360deg);
     }
+}
+
+.show{
+    visibility: visible;
 }
