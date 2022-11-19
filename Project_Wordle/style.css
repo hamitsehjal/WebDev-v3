@@ -3,8 +3,8 @@
 }
 
 body {
-    margin: 15px 50px;
-    padding: 50px 50px;
+    margin: 10px 20px 0px 20px;
+    padding: 00px 50px;
     background-color: black;
     border: 10px solid rgb(198, 195, 195);
     font-family: monospace;
@@ -127,9 +127,10 @@ body {
 }
 
 .loading {
-    animation: spinning 1s infinite;
+    animation: spinning 1s infinite linear;
     margin-bottom: 1em;
-    color:brown
+    color:brown;
+    font-size: large;
 }
 
 @keyframes spinning {
