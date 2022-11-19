@@ -1,12 +1,22 @@
 const letters = document.querySelectorAll(".flex-item")
 const ANSWER_LENGTH = 5
 
+const loadingIndicator = document.querySelector('.loading');
+console.log(loadingIndicator.innerText)
 
 
 async function init() {
 
     let currentGuess = ''
     let currentRow = 0
+    setLoading(true);
+    // Let's go and grab the word of the Day!!
+    const res = await fetch("https://words.dev-apis.com/word-of-the-day")
+    const resObj = await res.json()
+
+    const word = resObj.word.toUpperCase();
+    setLoading(false)
+    console.log(word)
 
     function isLetter(letter) {
         return /^[a-zA-Z]$/.test(letter);
@@ -53,7 +63,7 @@ async function init() {
     }
     document.addEventListener('keydown', function handleKeyPress(event) {
         const action = event.key;
-        console.log(action)
+        // console.log(action)
 
         if (action === 'Enter') {
             commit(); // which will save the word to compare it to the result!!
@@ -69,6 +79,24 @@ async function init() {
         }
 
     })
+
+    function setLoading(isLoading) {
+
+        // if(isLoading)
+        // {
+        //     // page is being loaded up
+        //     // so we need to show up the "indicator"
+        //     loadingIndicator.classList.remove('hidden');
+        // }
+        // else{
+        //     loadingIndicator.classList.add('hidden');
+        // }
+
+
+        //The toggleAttribute() method of the Element interface toggles a Boolean attribute 
+        //(removing it if it is present and adding it if it is not present) on the given element.
+        loadingIndicator.classList.toggle('show', isLoading)
+    }
 }
 
 init();
