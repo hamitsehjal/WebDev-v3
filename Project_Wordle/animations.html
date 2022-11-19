@@ -1,0 +1,49 @@
+<!-- This is a pracice guide that I made while practicing animations in Css -->
+
+<html>
+  <head>
+    <style>
+      .parent {
+        background-color: black;
+        color: white;
+        width: 500px;
+        height: 400px;
+      }
+      .child {
+        width: 50%;
+        height: 50%;
+        background-color: red;
+      }
+
+      .parent:hover .child {
+        animation: left-to-right 1s cubic-bezier(0.87, 0.42, 0.27, 1.55) forwards;
+      }
+
+      @keyframes left-to-right {
+
+        0%{
+            transform:translateX(0%)
+        }
+
+        33%{
+            transform:translateY(100%)
+        }
+
+        66%{
+            transform:translateX(100%) translateY(100%)
+        }
+
+        100% {
+          transform: translateX(100%);
+        }
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
