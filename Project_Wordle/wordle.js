@@ -5,7 +5,8 @@ const ANSWER_LENGTH = 5
 
 async function init() {
 
-    const currentGuess = ''
+    let currentGuess = ''
+
     function isLetter(letter) {
         return /^[a-zA-Z]$/.test(letter);
     }
@@ -17,6 +18,9 @@ async function init() {
         else {
             currentGuess = currentGuess.substring(0, currentGuess.length - 1) + letter;
         }
+
+        // This line will show the letters on the Screen!!
+        letters[currentGuess.length - 1].innerText = letter;
     }
     document.addEventListener('keydown', function handleKeyPress(event) {
         const action = event.key;
