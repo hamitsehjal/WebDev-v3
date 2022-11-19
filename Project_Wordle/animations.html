@@ -13,31 +13,34 @@
         width: 50%;
         height: 50%;
         background-color: red;
+        animation: left-to-right 1s cubic-bezier(0.87, 0.42, 0.27, 1.55)
+          forwards infinite alternate;
       }
 
       .parent:hover .child {
-        animation: left-to-right 1s cubic-bezier(0.87, 0.42, 0.27, 1.55) forwards;
+        animation-play-state: paused;
       }
 
       @keyframes left-to-right {
-
-        0%{
-            transform:translateX(0%)
+        0% {
+          transform: translateX(0%);
+          background-color: red;
         }
 
-        33%{
-            transform:translateY(100%)
+        33% {
+          transform: translateY(100%);
         }
-
-        66%{
-            transform:translateX(100%) translateY(100%)
+        50% {
+          background-color: blue;
+        }
+        66% {
+          transform: translateX(100%) translateY(100%);
         }
 
         100% {
+          background-color: green;
           transform: translateX(100%);
         }
-
-
       }
     </style>
   </head>
