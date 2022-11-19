@@ -35,8 +35,21 @@ async function init() {
             return;
         }
 
+
+
+        // TODO : validate the word using API
+
+        // TODO : is correct, is wrong or is close ??
+
+        // TODO : win or loose situation !!
+
         currentGuess = ''
         currentRow++;
+    }
+
+    function backspace() {
+        currentGuess = currentGuess.substring(0, currentGuess.length - 1);
+        letters[ANSWER_LENGTH * currentRow + currentGuess.length].innerText = '';
     }
     document.addEventListener('keydown', function handleKeyPress(event) {
         const action = event.key;
