@@ -47,8 +47,7 @@ body {
 .flex-item {
     background-color: #FFE5B4;
     margin: 5px;
-    padding:5px 5px;
-    border:3px solid chocolate;
+    border: 5px solid wheat;
     color: black;
     width: 50px;
     height: 50px;
@@ -59,16 +58,15 @@ body {
 
 
 .correct {
-    background-color: green;
-
+    border-color: green;
 }
 
 .close {
-    background-color: yellow;
+    border-color: yellow;
 }
 
 .wrong {
-    background-color: gray;
+    border-color: gray;
 }
 
 .invalid {
@@ -135,7 +133,7 @@ body {
     visibility: hidden;
     animation: spinning 1s infinite linear;
     margin-bottom: 1em;
-    color:brown;
+    color: brown;
     font-size: large;
 }
 
@@ -145,6 +143,6 @@ body {
     }
 }
 
-.show{
+.show {
     visibility: visible;
 }

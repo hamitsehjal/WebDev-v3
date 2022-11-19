@@ -18,6 +18,10 @@ async function init() {
     setLoading(false)
     console.log(word)
 
+    const wordParts = word.split("")
+
+
+
     function isLetter(letter) {
         return /^[a-zA-Z]$/.test(letter);
     }
@@ -50,6 +54,17 @@ async function init() {
         // TODO : validate the word using API
 
         // TODO : is correct, is wrong or is close ??
+
+        // if any letter is correct..
+
+        //The split() method splits a string into an array of substrings
+        const guessParts = currentGuess.split("");
+
+        for (let i = 0; i < ANSWER_LENGTH; i++) {
+            if (wordParts[i] === guessParts[i]) {
+                letters[ANSWER_LENGTH * currentRow + i].classList.add('correct')
+            }
+        }
 
         // TODO : win or loose situation !!
 
