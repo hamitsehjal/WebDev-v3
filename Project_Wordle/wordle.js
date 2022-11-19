@@ -66,6 +66,20 @@ async function init() {
             }
         }
 
+        for (let i = 0; i < ANSWER_LENGTH; i++) {
+            if (wordParts[i] === guessParts[i]) {
+                // do nothing
+            }
+            else if (wordParts.includes(guessParts[i])) {
+                letters[ANSWER_LENGTH * currentRow + i].classList.add('close')
+            }
+            else {
+                letters[ANSWER_LENGTH * currentRow + i].classList.add('wrong')
+
+            }
+
+        }
+
         // TODO : win or loose situation !!
 
         currentGuess = ''
