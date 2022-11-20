@@ -111,7 +111,9 @@ async function init() {
         currentRow++;
         if (currentGuess === word) {
             // You win
-            alert("Congrats!! You Won")
+            // alert("Congrats!! You Won")
+            const title = document.querySelector(".title")
+            title.classList.add('winner')
             done = true
             return
         }
@@ -136,9 +138,9 @@ async function init() {
 
             letters[ANSWER_LENGTH * currentRow + i].classList.remove('invalid')
 
-            setTimeout(function(){
+            setTimeout(function () {
                 letters[ANSWER_LENGTH * currentRow + i].classList.add('invalid')
-            },10)
+            }, 10)
         }
 
 
