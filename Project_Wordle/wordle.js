@@ -60,7 +60,7 @@ async function init() {
         // TODO : validate the word using API
 
         // setting the loading state to true
-        isLoading(true)
+        isLoading = true
         setLoading(true)
 
         const res = await fetch("https://words.dev-apis.com/validate-word", {
@@ -72,7 +72,7 @@ async function init() {
         const validWord = resObj.validWord;
 
         // setting the loading state back to false
-        isLoading(false)
+        isLoading = false
         setLoading(false)
 
         if (!validWord) {
@@ -128,6 +128,21 @@ async function init() {
     function backspace() {
         currentGuess = currentGuess.substring(0, currentGuess.length - 1);
         letters[ANSWER_LENGTH * currentRow + currentGuess.length].innerText = '';
+    }
+
+    function markInvalidWord() {
+        // alert("Invalid Word!!");
+        for (let i = 0; i < ANSWER_LENGTH; i++) {
+
+            letters[ANSWER_LENGTH * currentRow + i].classList.remove('invalid')
+
+            setTimeout(function(){
+                letters[ANSWER_LENGTH * currentRow + i].classList.add('invalid')
+            },10)
+        }
+
+
+
     }
     document.addEventListener('keydown', function handleKeyPress(event) {
 
