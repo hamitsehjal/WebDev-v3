@@ -4,11 +4,14 @@ const ANSWER_LENGTH = 5
 const loadingIndicator = document.querySelector('.loading');
 console.log(loadingIndicator.innerText)
 
+const ROUNDS = 6
 
 async function init() {
 
     let currentGuess = ''
     let currentRow = 0
+    let done = false
+    let isLoading = true;
     setLoading(true);
     // Let's go and grab the word of the Day!!
     const res = await fetch("https://words.dev-apis.com/word-of-the-day")
@@ -16,6 +19,7 @@ async function init() {
 
     const word = resObj.word.toUpperCase();
     setLoading(false)
+    isLoading = false;
     console.log(word)
 
     const wordParts = word.split("")
@@ -88,8 +92,21 @@ async function init() {
 
         // TODO : win or loose situation !!
 
-        currentGuess = ''
         currentRow++;
+        if (currentGuess === word) {
+            // You win
+            alert("Congrats!! You Won")
+            done = true
+            return
+        }
+        else if (currentRow === ROUNDS) {
+            // you lost
+            alert(`You lost! Correct Word was ${word}`)
+            done = true
+            return
+        }
+        currentGuess = ''
+
     }
 
     function backspace() {
@@ -97,6 +114,11 @@ async function init() {
         letters[ANSWER_LENGTH * currentRow + currentGuess.length].innerText = '';
     }
     document.addEventListener('keydown', function handleKeyPress(event) {
+
+        if (done || isLoading) {
+            // don nothing
+            return;
+        }
         const action = event.key;
         // console.log(action)
 
