@@ -19,7 +19,9 @@ async function init() {
     console.log(word)
 
     const wordParts = word.split("")
-
+    console.log(wordParts)
+    // We are making map of "right answer"
+    const map = makeMap(wordParts);
 
 
     function isLetter(letter) {
@@ -61,8 +63,11 @@ async function init() {
         const guessParts = currentGuess.split("");
 
         for (let i = 0; i < ANSWER_LENGTH; i++) {
+            // Mark as Correct!!
             if (wordParts[i] === guessParts[i]) {
                 letters[ANSWER_LENGTH * currentRow + i].classList.add('correct')
+                map[guessParts[i]]--;
+
             }
         }
 
@@ -70,8 +75,9 @@ async function init() {
             if (wordParts[i] === guessParts[i]) {
                 // do nothing
             }
-            else if (wordParts.includes(guessParts[i])) {
+            else if (wordParts.includes(guessParts[i]) && map[guessParts[i]] > 0) {
                 letters[ANSWER_LENGTH * currentRow + i].classList.add('close')
+                map[guessParts[i]]--;
             }
             else {
                 letters[ANSWER_LENGTH * currentRow + i].classList.add('wrong')
@@ -125,6 +131,22 @@ async function init() {
         //The toggleAttribute() method of the Element interface toggles a Boolean attribute 
         //(removing it if it is present and adding it if it is not present) on the given element.
         loadingIndicator.classList.toggle('show', isLoading)
+    }
+
+    function makeMap(array) {
+        const obj = {}
+
+        for (let i = 0; i < array.length; i++) {
+            const letter = array[i]
+            if (obj[length]) {
+                obj[letter]++;
+            }
+            else {
+                obj[letter] = 1;
+            }
+        }
+        return obj
+
     }
 }
 
