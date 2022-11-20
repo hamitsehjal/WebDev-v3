@@ -59,10 +59,26 @@ async function init() {
 
         // TODO : validate the word using API
 
-        // TODO : is correct, is wrong or is close ??
+        // setting the loading state to true
+        isLoading(true)
+        setLoading(true)
 
-        // if any letter is correct..
+        const res = await fetch("https://words.dev-apis.com/validate-word", {
+            method: "POST",
+            body: JSON.stringify({ word: currentGuess })
+        })
 
+        const resObj = await res.json()
+        const validWord = resObj.validWord;
+
+        // setting the loading state back to false
+        isLoading(false)
+        setLoading(false)
+
+        if (!validWord) {
+            markInvalidWord();
+            return;
+        }
         //The split() method splits a string into an array of substrings
         const guessParts = currentGuess.split("");
 
