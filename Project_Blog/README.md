@@ -11,8 +11,11 @@ My blog has two pages: index.html and about.html
 My __index.html__ has a title and a quick intro.
 My index.html also has a link to about.html.
 
+
 ## Screenshots
-![index.html](/pics/blog_1.png?raw=true "Optional Title")
+
+- ![index.html](https://github.com/hamitsehjal/WebDev-v3/blob/main/Project_Blog/pics/blog_1.png?raw=true "Optional Title")
+- ![index.html](https://github.com/hamitsehjal/WebDev-v3/blob/main/Project_Blog/pics/blog_2.png?raw=true "Optional Title")
 
 I have included five posts on my Blog.
 
@@ -27,8 +30,3 @@ My __about.html__ consists of the following:
 - The name of my blog
 - Random cool Image 😎
 - A few paragraphs about myself that includes a list of my recent jobs/schools/accomplishments.
-
-
-
-
-
