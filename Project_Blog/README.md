@@ -36,8 +36,25 @@ My __about.html__ consists of the following:
 
 - ![about.html](https://github.com/hamitsehjal/WebDev-v3/blob/main/Project_Blog/pics/blog_3.png?raw=true "Optional Title")
 
+
+IMP: Quick note on how to do an image: put the image in the same directory as the index.html and about.html and then put 
+```bash
+<img src="the-name-of-the-file.jpg" alt="a text description of what the image is for sight-impaired folks" /> 
+```
+to render the image.
+
+This will mostly be black and white and that's okay. You can come back and restyle this later with CSS.
 ## Acknowledgements
 
  - [Project Idea - Frontend Masters](https://btholt.github.io/complete-intro-to-web-dev-v3/)
  - [Awesome README Builder - readme.io](https://readme.so/editor)
+
+
+## Deployment
+
+To deploy this project:
+
+```bash
+  Open the "index.html" OR "about.html" in any browser
+```
 
