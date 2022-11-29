@@ -12,12 +12,13 @@ My __index.html__ has a title and a quick intro.
 My index.html also has a link to about.html.
 
 
-## Screenshots
+## Snapshots of "index.html "Webpage!!
 
 - ![index.html](https://github.com/hamitsehjal/WebDev-v3/blob/main/Project_Blog/pics/blog_1.png?raw=true "Optional Title")
+
 - ![index.html](https://github.com/hamitsehjal/WebDev-v3/blob/main/Project_Blog/pics/blog_2.png?raw=true "Optional Title")
 
-I have included five posts on my Blog.
+#### I have included five posts on my Blog.
 
 Each post has the following :
 - A title
@@ -30,3 +31,13 @@ My __about.html__ consists of the following:
 - The name of my blog
 - Random cool Image 😎
 - A few paragraphs about myself that includes a list of my recent jobs/schools/accomplishments.
+
+### Snapshot of "about.html "Webpage!!
+
+- ![about.html](https://github.com/hamitsehjal/WebDev-v3/blob/main/Project_Blog/pics/blog_3.png?raw=true "Optional Title")
+
+## Acknowledgements
+
+ - [Project Idea - Frontend Masters](https://btholt.github.io/complete-intro-to-web-dev-v3/)
+ - [Awesome README Builder - readme.io](https://readme.so/editor)
+
