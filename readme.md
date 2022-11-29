@@ -24,7 +24,7 @@ Her's few snapshot of the projects that this Repository holds
 ## Feel free to use the code in your own Projects!!
 
 ## Credits: 
-### I designed this Project while learning Web Development from Frontend Masters!!
+### I designed these Project while learning Web Development from Frontend Masters!!
 
 - #### Huge shoutout to [Brian Holt](https://www.linkedin.com/in/btholt/) and [Frontend Masters](https://frontendmasters.com/) for creating this awesome course.
 - #### Here is the link to this [Course Website!!](https://btholt.github.io/complete-intro-to-web-dev-v3)
