@@ -57,4 +57,7 @@ To deploy this project:
 ```bash
   Open the "index.html" OR "about.html" in any browser
 ```
+## Support
+
+For support, email hamitsehjal26@gmail.com 
 
